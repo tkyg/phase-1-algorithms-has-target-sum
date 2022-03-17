@@ -1,4 +1,11 @@
 function hasTargetSum(array, target) {
+  for (let i = 0; i < array.length; i++){
+    const variable = target - array[i]
+    for (let j = i+1; j < array.length; j++){
+      if (array[j] === variable) return true;
+    }
+  }
+  return false
   // Write your algorithm here
 }
 
@@ -12,6 +19,8 @@ function hasTargetSum(array, target) {
 
 /*
   Add written explanation of your solution here
+  an array has a list of numbers, pair of which must equal to the target number
+  itirate through the array by pairing numbers and checking if the pair equals to the target
 */
 
 // You can run `node index.js` to view these console logs
